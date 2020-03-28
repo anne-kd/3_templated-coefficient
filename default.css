@@ -184,12 +184,12 @@ hr {
 
 /** MENU */
 
-#menu {
+.menu {
 	overflow: hidden;
 	background: #101010;
 }
 
-#menu ul {
+.menu ul {
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px;
 	list-style: none;
@@ -199,11 +199,11 @@ hr {
 	justify-content: center;
 }
 
-#menu li {
+.menu li {
 	display: inline-block;
 }
 
-#menu a {
+.menu a {
 	display: block;
 	padding: 0px 40px 0px 40px;
 	line-height: 70px;
@@ -216,16 +216,23 @@ hr {
 	border: none;
 }
 
-#menu a:hover, #menu .current_page_item a {
+.menu a:hover, #menu .current_page_item a {
 	text-decoration: none;
 	color: rgba(255,255,255,0.8);
 }
 
-#menu .current_page_item a {
+.menu .current_page_item a {
 }
 
-#menu .last {
+.menu .last {
 	border-right: none;
+}
+
+.menu.fixed {
+    position: fixed; 
+	top: 0;
+	left: 0;
+    width: 100vw;
 }
 
 /** PAGE */
