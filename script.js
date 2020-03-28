@@ -73,4 +73,21 @@ let MouseMovement = function(e){
    
 }
 
-window.addEventListener('mousemove',  MouseMovement)
+window.addEventListener('mousemove',  MouseMovement);
+
+
+/******************************
+ * FIXEDMENU
+ ******************************/
+
+window.addEventListener('scroll', function(){
+let abstandOben = document.querySelector('.menu').offsetTop;
+let aktuellePos = window.pageYOffset;
+
+if (abstandOben < aktuellePos){
+    document.querySelector('.menu').classList.add('fixed');
+}
+else{
+    document.querySelector('.menu').classList.remove('fixed');
+}
+});
