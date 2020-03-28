@@ -121,7 +121,7 @@ hr {
 #header {
 	position: relative;
 	overflow: hidden;
-	height: 600px;
+	height: 90vh;
 }
 
 #social
@@ -129,6 +129,18 @@ hr {
 	position: absolute;
 	top: 4em;
 	right: 0;
+}
+
+#headline {
+	position: absolute;
+	top: 70%;
+	left: 16%;
+}
+#headline h2 {
+	font-size: 3.5em;
+	text-transform: lowercase;
+	color: #FFF;
+	font-weight: 500;
 }
 
 /** LOGO */
@@ -182,6 +194,9 @@ hr {
 	padding: 0px 0px;
 	list-style: none;
 	line-height: normal;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #menu li {
@@ -218,6 +233,7 @@ hr {
 #page {
 	overflow: hidden;
 	padding: 5em 0em;
+	padding-top: 10em;
 }
 
 	#page img
