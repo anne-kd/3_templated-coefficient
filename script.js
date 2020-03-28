@@ -1,6 +1,6 @@
 
 /***************************************** 
-INPUT
+*INPUT
 *****************************************/
 let input = {
     mouseX: {
@@ -27,7 +27,7 @@ input.mouseY.range = input.mouseY.end - input.mouseY.start;
 
 
 /***************************************** 
-OUTPUT
+*OUTPUT
 *****************************************/
 
 let output = {
@@ -90,4 +90,28 @@ if (abstandOben < aktuellePos){
 else{
     document.querySelector('.menu').classList.remove('fixed');
 }
+});
+
+
+/******************************
+ * MOUSEOVER + POPUP
+ ******************************/
+const button = document.querySelector('#clickbutton');
+const closebutton = document.querySelector('#close');
+const popup = document.querySelector('.popup');
+
+button.addEventListener('mouseover', function(){
+    this.style.background = 'white';
+    this.style.color = 'black';
+});
+button.addEventListener('mouseout', function(){
+    this.style.background = 'black';
+    this.style.color = 'white';
+});
+
+button.addEventListener('click', function(event){
+    popup.classList.add('visible');
+});
+closebutton.addEventListener('click', function(event){
+    popup.classList.remove('visible');
 });
