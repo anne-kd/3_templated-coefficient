@@ -68,6 +68,7 @@ var MouseMovement = function(e){
 window.addEventListener('mousemove',  MouseMovement)
 
 /*
+ANDERE IDEE
 var translate = 'translate(' + output.posX.current + 'px) scale(1.1)';
   $('.bg').css({
     '-webit-transform': translate,
