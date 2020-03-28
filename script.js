@@ -62,7 +62,16 @@ var MouseMovement = function(e){
 
     output.posX.current = output.posX.start + (input.mouseX.part * output.posX.range);
     //Element ansprechen und 'transformX(output.posX.current)';
+   
 }
 
 window.addEventListener('mousemove',  MouseMovement)
 
+/*
+var translate = 'translate(' + output.posX.current + 'px) scale(1.1)';
+  $('.bg').css({
+    '-webit-transform': translate,
+    '-moz-transform': translate,
+    'transform': translate
+  });
+*/
