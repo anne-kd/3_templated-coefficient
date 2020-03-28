@@ -1,3 +1,7 @@
+const textHTML = document.getElementsByClassName('headline');
+/***************************************** 
+INPUT
+*****************************************/
 var input = {
     mouseX: {
         start:20,
@@ -10,8 +14,6 @@ var input = {
         current: 0
     }
 }
-
-
 //Reichweite festlegen (wenn ich später das Mousemovement nur innerhalb des Wrappers ansprechen will)
 // Reichweite = Ende - Start
 input.mouseX.range = input.mouseX.end - input.mouseX.start;
@@ -22,6 +24,25 @@ input.mouseY.range = input.mouseY.end - input.mouseY.start;
 //Zahl = (aktuelle Position - Start Position): gesamte Länge/Höhe /Reichweite
 //input.mouseX.part = (input.mouseX.current - input.mouseX.start)/ input.mouseX.range;
 //input.mouseY.part = (input.mouseY.current - input.mouseY.start)/ input.mouseY.range;
+
+
+/***************************************** 
+OUTPUT
+*****************************************/
+
+var output = {
+    posX:{
+        start:-100,
+        end:100,
+        current: 0,
+        
+    },
+    posY:{}
+}
+output.posX.range = output.posX.end - output.posX.start;
+
+
+
 
 
 var MouseMovement = function(e){
@@ -39,12 +60,9 @@ var MouseMovement = function(e){
     input.mouseY.part = (input.mouseY.current - input.mouseY.start)/ input.mouseY.range;
 
 
-    //console.log('x', input.mouseX.part);
-    //console.log('y', input.mouseY.current);
-
-    
+    output.posX.current = output.posX.start + (input.mouseX.part * output.posX.range);
+    //Element ansprechen und 'transformX(output.posX.current)';
 }
 
 window.addEventListener('mousemove',  MouseMovement)
-
 
