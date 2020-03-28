@@ -133,8 +133,8 @@ hr {
 
 #headline {
 	position: absolute;
-	top: 400px ;
-	left: 200px;
+	top: 70%;
+	left: 16%;
 }
 #headline h2 {
 	font-size: 3.5em;
