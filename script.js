@@ -115,3 +115,26 @@ button.addEventListener('click', function(event){
 closebutton.addEventListener('click', function(event){
     popup.classList.remove('visible');
 });
+
+
+/**********************************
+ * SLIDER
+***********************************/
+
+const slides = document.querySelectorAll('.slider')
+let a = 0;
+
+slideShow();
+
+
+function slideShow(){
+    for (let x = 0; x < slides.length; x++) {
+        const element = slides[x];
+        element.classList.remove('current');
+    }
+
+    a++;
+    if (a > slides.length) {a=1};
+    slides[a-1].classList.add('current');
+    setTimeout(slideShow, 3600);
+}

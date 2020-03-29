@@ -626,3 +626,17 @@ ul.style3 .first {
 	align-items: center;
 	border-radius: 10px;
 }
+
+#impression-wrapper {
+	overflow: hidden;
+	padding: 5em 0em;
+	background-color: antiquewhite;
+}
+
+.slider {
+	display: none;
+	width: 100%;
+}
+.slider.current {
+	display: inline-block;
+}
