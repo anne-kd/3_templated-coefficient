@@ -229,6 +229,7 @@ hr {
 }
 
 .menu.fixed {
+	z-index: 100;
     position: fixed; 
 	top: 0;
 	left: 0;
@@ -630,13 +631,31 @@ ul.style3 .first {
 #impression-wrapper {
 	overflow: hidden;
 	padding: 5em 0em;
-	background-color: antiquewhite;
+	background-color: white;
 }
 
 .slider {
+	z-index: 0;
 	display: none;
 	width: 100%;
+	transition: ease-out;
+	animation: cominright 4s;
 }
 .slider.current {
 	display: inline-block;
+}
+
+@keyframes cominright {
+	0% {
+		transform: translateX(-80px);
+		opacity: 0;
+	}
+	50% {
+		transform: translateX(-20px);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(50px);
+		opacity: 0;
+	}
 }
