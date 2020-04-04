@@ -553,6 +553,7 @@ ul.style3 .first {
 		font-weight: 400;
 		font-size: 1em;
 		color: #FFF;
+		cursor: pointer;
 	}
 	
 /*********************************************************************************/
@@ -626,6 +627,7 @@ ul.style3 .first {
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
+	cursor: pointer;
 }
 
 #impression-wrapper {

@@ -79,9 +79,9 @@ window.addEventListener('mousemove',  MouseMovement);
 /******************************
  * FIXEDMENU
  ******************************/
-
+const menu = document.querySelector('.menu');
 window.addEventListener('scroll', function(){
-let abstandOben = document.querySelector('.menu').offsetTop;
+let abstandOben = menu.offsetTop;
 let aktuellePos = window.pageYOffset;
 
 if (abstandOben < aktuellePos){
@@ -96,20 +96,25 @@ else{
 /******************************
  * MOUSEOVER + POPUP
  ******************************/
-const button = document.querySelector('#clickbutton');
+
+const button = document.querySelectorAll('.button');
+const openbutton = document.querySelector('#clickbutton');
 const closebutton = document.querySelector('#close');
 const popup = document.querySelector('.popup');
 
-button.addEventListener('mouseover', function(){
-    this.style.background = 'white';
-    this.style.color = 'black';
-});
-button.addEventListener('mouseout', function(){
-    this.style.background = 'black';
-    this.style.color = 'white';
+
+button.forEach(element => {
+    element.addEventListener('mouseover', function(){
+        this.style.background = 'white';
+        this.style.color = 'black';
+    });
+    element.addEventListener('mouseout', function(){
+        this.style.background = 'black';
+        this.style.color = 'white';
+    });
 });
 
-button.addEventListener('click', function(event){
+openbutton.addEventListener('click', function(event){
     popup.classList.add('visible');
 });
 closebutton.addEventListener('click', function(event){
