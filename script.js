@@ -143,3 +143,52 @@ function slideShow(){
     slides[a-1].classList.add('current');
     setTimeout(slideShow, 3600);
 }
+
+
+/**********************************
+ * CANVAS
+***********************************/
+
+const canv = document.querySelector('canvas');
+const ctx = canv.getContext('2d');
+var raf;
+
+let rect = {
+    x: 10,
+    y: 10,
+    x1:2,
+    y1:2,
+    width: 50,
+    height: 50,
+    color: 'black',
+    draw: function(){
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+    }
+}
+
+function draw() {
+    ctx.clearRect(0,0, canvas.width, canvas.height);
+    rect.draw();
+    rect.x += rect.x1;
+    rect.y += rect.y1;
+    if (rect.y + rect.y1 > canv.height-50 || rect.y + rect.y1 < 0) {
+        rect.y1 = -rect.y1;
+      }
+      if (rect.x + rect.x1 > canvas.width-50 || rect.x + rect.x1 < 0) {
+        rect.x1 = -rect.x1;
+      }
+    
+      raf = window.requestAnimationFrame(draw);
+}
+
+canv.addEventListener('mouseover', function(e) {
+    raf = window.requestAnimationFrame(draw);
+  });
+
+canv.addEventListener('mouseout', function(e) {
+    window.cancelAnimationFrame(raf);
+});
+  
+rect.draw();

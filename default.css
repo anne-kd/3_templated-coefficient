@@ -661,3 +661,20 @@ ul.style3 .first {
 		opacity: 0;
 	}
 }
+
+#canvas-wrapper{
+	overflow: hidden;
+	padding: 5em 0em;
+	background-color: aliceblue;
+}
+#canvas-wrapper div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#canvas {
+	width: 900px;
+	height: 500px;
+	background-color: white;
+}
