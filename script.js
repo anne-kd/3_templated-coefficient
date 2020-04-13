@@ -161,7 +161,7 @@ let rect = {
     width: 50,
     height: 50,
     color: 'black',
-    draw: function(){
+    initialDraw: function(){
         ctx.fillRect(this.x, this.y, this.width, this.height);
         ctx.fillStyle = this.color;
         ctx.fill();
@@ -170,7 +170,7 @@ let rect = {
 
 function draw() {
     ctx.clearRect(0,0, canvas.width, canvas.height);
-    rect.draw();
+    rect.initialDraw();
     rect.x += rect.x1;
     rect.y += rect.y1;
     if (rect.y + rect.y1 > canv.height-50 || rect.y + rect.y1 < 0) {
@@ -191,4 +191,3 @@ canv.addEventListener('mouseout', function(e) {
     window.cancelAnimationFrame(raf);
 });
   
-rect.draw();
